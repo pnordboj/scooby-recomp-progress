@@ -1,0 +1,158 @@
+{
+  "project": "Scooby-Doo! Night of 100 Frights \u2014 Native PC Port (GameCube Recomp)",
+  "repo": "https://github.com/pnordboj/Scooby-Doo_Rezoinked",
+  "generated": "2026-07-10T08:52:36+00:00",
+  "overall_percent": 71.5,
+  "headline": "First level loads + world renders in-game (h001)",
+  "metrics": {
+    "static_recompilation_percent": 100.0,
+    "code_map_coverage_percent": 78.9,
+    "code_pages_entered": 321,
+    "code_pages_total": 407,
+    "dispatch_entries_executed": 10181,
+    "deepest_run_blocks": 2766021032,
+    "instructions_recompiled": 416072
+  },
+  "milestones_done": 18,
+  "milestones_total": 24,
+  "milestones": [
+    {
+      "name": "Game extracted (RVZ -> DOL + 329 asset files)",
+      "done": true
+    },
+    {
+      "name": "main.dol statically recompiled (0 unknown instructions)",
+      "done": true
+    },
+    {
+      "name": "Runtime harness: DOL loads, recompiled code executes",
+      "done": true
+    },
+    {
+      "name": "Hardware init survives (PI / DSP / ARAM / AI mailboxes)",
+      "done": true
+    },
+    {
+      "name": "OS threading + interrupt delivery (retrace, wakeups)",
+      "done": true
+    },
+    {
+      "name": "DVD/DI serving: inquiry + real file reads from disc image",
+      "done": true
+    },
+    {
+      "name": "Engine type-registry boot (bss-loader root-cause fix)",
+      "done": true
+    },
+    {
+      "name": "VI framebuffer presented in a host window (first pixels)",
+      "done": true
+    },
+    {
+      "name": "GX software rasterizer: 2D UI renders (textures + CI4/CI8)",
+      "done": true
+    },
+    {
+      "name": "SI controller detected (transfer buffer + SI interrupt)",
+      "done": true
+    },
+    {
+      "name": "Memory-card dialog advances (input gate cracked)",
+      "done": true
+    },
+    {
+      "name": "Post-dialog level/world data streams from disc",
+      "done": true
+    },
+    {
+      "name": "World loads: RenderWare models instantiate (chars/powerups)",
+      "done": true
+    },
+    {
+      "name": "Post-load scene begins rendering (loading UI + sky)",
+      "done": true
+    },
+    {
+      "name": "3D intro scene renders natively (Scooby on screen!)",
+      "done": true
+    },
+    {
+      "name": "Intro cutscene plays (gang animated, Z-buffer, blending)",
+      "done": true
+    },
+    {
+      "name": "TITLE SCREEN renders (logo + 3D haunted house)",
+      "done": true
+    },
+    {
+      "name": "First level loads + world renders in-game (h001)",
+      "done": true
+    },
+    {
+      "name": "Title screen menu interactive (input-driven)",
+      "done": false
+    },
+    {
+      "name": "Full input path (game input manager fed each frame)",
+      "done": false
+    },
+    {
+      "name": "3D rendering (Z-buffer, TEV stages, lighting)",
+      "done": false
+    },
+    {
+      "name": "In-game / level playable",
+      "done": false
+    },
+    {
+      "name": "Audio (DSP-HLE / music + SFX)",
+      "done": false
+    },
+    {
+      "name": "Stability / performance / packaging pass",
+      "done": false
+    }
+  ],
+  "subsystems": [
+    {
+      "name": "CPU (Gekko / PPC750 + paired singles)",
+      "status": "done",
+      "notes": "static recompilation, 0 unknown instructions"
+    },
+    {
+      "name": "OS threading / interrupts",
+      "status": "done",
+      "notes": "retrace emulation, thread wakeups, DI/SI delivery"
+    },
+    {
+      "name": "DVD / DI",
+      "status": "works",
+      "notes": "inquiry + real file reads; completion timing tuned"
+    },
+    {
+      "name": "VI (video out)",
+      "status": "works",
+      "notes": "framebuffer blit to a host window each vsync"
+    },
+    {
+      "name": "GX (GPU)",
+      "status": "partial",
+      "notes": "software rasterizer renders 3D level scenes; lighting/TEV polish pending"
+    },
+    {
+      "name": "SI (controllers)",
+      "status": "partial",
+      "notes": "pad detected; not yet driving gameplay"
+    },
+    {
+      "name": "EXI / memory card",
+      "status": "partial",
+      "notes": "\"no card\" path works; saving not implemented"
+    },
+    {
+      "name": "DSP / AI (audio)",
+      "status": "todo",
+      "notes": "mailbox HLE only; no sound yet"
+    }
+  ]
+}

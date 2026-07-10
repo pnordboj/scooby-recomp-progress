@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scooby-Doo! Night of 100 Frights — Native PC Port (GameCube Recomp) — Progress</title>
+<style>
+ :root{color-scheme:dark}
+ body{margin:0;background:#0d1117;color:#c9d1d9;font:15px/1.5 "Segoe UI",system-ui,sans-serif}
+ .wrap{max-width:820px;margin:0 auto;padding:28px 20px}
+ h1{font-size:20px;margin:0 0 4px} .sub{color:#8b949e;font-size:13px}
+ .head{font-size:17px;color:#e6edf3;margin:18px 0 6px}
+ .barwrap{background:#21262d;border-radius:8px;height:22px;overflow:hidden;margin:8px 0}
+ .bar{height:100%;background:linear-gradient(90deg,#4c9aff,#36b37e);width:71.5%}
+ .pct{font-weight:700;font-size:22px}
+ .metrics{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
+ .metric{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:10px 14px;min-width:120px}
+ .metric b{display:block;font-size:19px;color:#e6edf3} .metric span{font-size:12px;color:#8b949e}
+ h2{font-size:14px;text-transform:uppercase;letter-spacing:.04em;color:#8b949e;margin:26px 0 8px}
+ ul{list-style:none;padding:0;margin:0} li{padding:3px 0} li .mk{display:inline-block;width:20px;color:#36b37e}
+ li.todo{color:#8b949e} li.todo .mk{color:#6e7681}
+ table{width:100%;border-collapse:collapse;font-size:14px} td{padding:6px 8px;border-top:1px solid #21262d}
+ .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;vertical-align:middle}
+ a{color:#4c9aff;text-decoration:none} .foot{margin-top:26px;color:#6e7681;font-size:12px}
+</style></head><body><div class="wrap">
+<h1>Scooby-Doo! Night of 100 Frights — Native PC Port (GameCube Recomp)</h1>
+<div class="sub">Live build progress · updated 2026-07-10T08:52:36+00:00</div>
+<div class="head">First level loads + world renders in-game (h001)</div>
+<div class="barwrap"><div class="bar"></div></div>
+<div class="pct">72% <span style="font-size:13px;color:#8b949e;font-weight:400">to a playable native port</span></div>
+<div class="metrics">
+ <div class="metric"><b>100%</b><span>PowerPC recompiled</span></div>
+ <div class="metric"><b>78.9%</b><span>code-map reached</span></div>
+ <div class="metric"><b>18/24</b><span>milestones</span></div>
+</div>
+<h2>Milestones</h2><ul><li class="done"><span class="mk">✔</span>Game extracted (RVZ -&gt; DOL + 329 asset files)</li>
+<li class="done"><span class="mk">✔</span>main.dol statically recompiled (0 unknown instructions)</li>
+<li class="done"><span class="mk">✔</span>Runtime harness: DOL loads, recompiled code executes</li>
+<li class="done"><span class="mk">✔</span>Hardware init survives (PI / DSP / ARAM / AI mailboxes)</li>
+<li class="done"><span class="mk">✔</span>OS threading + interrupt delivery (retrace, wakeups)</li>
+<li class="done"><span class="mk">✔</span>DVD/DI serving: inquiry + real file reads from disc image</li>
+<li class="done"><span class="mk">✔</span>Engine type-registry boot (bss-loader root-cause fix)</li>
+<li class="done"><span class="mk">✔</span>VI framebuffer presented in a host window (first pixels)</li>
+<li class="done"><span class="mk">✔</span>GX software rasterizer: 2D UI renders (textures + CI4/CI8)</li>
+<li class="done"><span class="mk">✔</span>SI controller detected (transfer buffer + SI interrupt)</li>
+<li class="done"><span class="mk">✔</span>Memory-card dialog advances (input gate cracked)</li>
+<li class="done"><span class="mk">✔</span>Post-dialog level/world data streams from disc</li>
+<li class="done"><span class="mk">✔</span>World loads: RenderWare models instantiate (chars/powerups)</li>
+<li class="done"><span class="mk">✔</span>Post-load scene begins rendering (loading UI + sky)</li>
+<li class="done"><span class="mk">✔</span>3D intro scene renders natively (Scooby on screen!)</li>
+<li class="done"><span class="mk">✔</span>Intro cutscene plays (gang animated, Z-buffer, blending)</li>
+<li class="done"><span class="mk">✔</span>TITLE SCREEN renders (logo + 3D haunted house)</li>
+<li class="done"><span class="mk">✔</span>First level loads + world renders in-game (h001)</li>
+<li class="todo"><span class="mk">○</span>Title screen menu interactive (input-driven)</li>
+<li class="todo"><span class="mk">○</span>Full input path (game input manager fed each frame)</li>
+<li class="todo"><span class="mk">○</span>3D rendering (Z-buffer, TEV stages, lighting)</li>
+<li class="todo"><span class="mk">○</span>In-game / level playable</li>
+<li class="todo"><span class="mk">○</span>Audio (DSP-HLE / music + SFX)</li>
+<li class="todo"><span class="mk">○</span>Stability / performance / packaging pass</li></ul>
+<h2>Subsystems</h2><table><tr><td><span class="dot" style="background:#36b37e"></span>CPU (Gekko / PPC750 + paired singles)</td><td>static recompilation, 0 unknown instructions</td></tr>
+<tr><td><span class="dot" style="background:#36b37e"></span>OS threading / interrupts</td><td>retrace emulation, thread wakeups, DI/SI delivery</td></tr>
+<tr><td><span class="dot" style="background:#36b37e"></span>DVD / DI</td><td>inquiry + real file reads; completion timing tuned</td></tr>
+<tr><td><span class="dot" style="background:#36b37e"></span>VI (video out)</td><td>framebuffer blit to a host window each vsync</td></tr>
+<tr><td><span class="dot" style="background:#f5a623"></span>GX (GPU)</td><td>software rasterizer renders 3D level scenes; lighting/TEV polish pending</td></tr>
+<tr><td><span class="dot" style="background:#f5a623"></span>SI (controllers)</td><td>pad detected; not yet driving gameplay</td></tr>
+<tr><td><span class="dot" style="background:#f5a623"></span>EXI / memory card</td><td>&quot;no card&quot; path works; saving not implemented</td></tr>
+<tr><td><span class="dot" style="background:#6e7681"></span>DSP / AI (audio)</td><td>mailbox HLE only; no sound yet</td></tr></table>
+<div class="foot">Generated from build metrics. Source code is private.
+Data: <a href="status.json">status.json</a></div>
+</div></body></html>
