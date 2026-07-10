@@ -1,9 +1,9 @@
 {
   "project": "Scooby-Doo! Night of 100 Frights \u2014 Native PC Port (GameCube Recomp)",
   "repo": "https://github.com/pnordboj/Scooby-Doo_Rezoinked",
-  "generated": "2026-07-10T13:35:52+00:00",
-  "overall_percent": 71.5,
-  "headline": "First level loads + world renders in-game (h001)",
+  "generated": "2026-07-10T20:19:56+00:00",
+  "overall_percent": 72.8,
+  "headline": "In-level crash fixed: level renders indefinitely (UAF)",
   "metrics": {
     "static_recompilation_percent": 100.0,
     "code_map_coverage_percent": 68.3,
@@ -13,8 +13,8 @@
     "deepest_run_blocks": 2919235584,
     "instructions_recompiled": 416072
   },
-  "milestones_done": 18,
-  "milestones_total": 24,
+  "milestones_done": 19,
+  "milestones_total": 25,
   "milestones": [
     {
       "name": "Game extracted (RVZ -> DOL + 329 asset files)",
@@ -86,6 +86,10 @@
     },
     {
       "name": "First level loads + world renders in-game (h001)",
+      "done": true
+    },
+    {
+      "name": "In-level crash fixed: level renders indefinitely (UAF)",
       "done": true
     },
     {

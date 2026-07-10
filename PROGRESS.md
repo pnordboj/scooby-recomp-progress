@@ -6,7 +6,7 @@ _Progress generated 2026-07-10 by `tools/gen_progress.py`. Run it after a sessio
 
 ## Overall (boot → playable milestones)
 
-`█████████████████████░░░░░░░░░` **72%**
+`██████████████████████░░░░░░░░` **73%**
 
 ## Metrics
 
@@ -40,6 +40,7 @@ _Code-map coverage = share of 4KB pages of game code the harness has entered —
 - [x] Intro cutscene plays (gang animated, Z-buffer, blending)
 - [x] TITLE SCREEN renders (logo + 3D haunted house)
 - [x] First level loads + world renders in-game (h001)
+- [x] In-level crash fixed: level renders indefinitely (UAF)
 - [ ] Title screen menu interactive (input-driven)
 - [ ] Full input path (game input manager fed each frame)
 - [ ] 3D rendering (Z-buffer, TEV stages, lighting)
