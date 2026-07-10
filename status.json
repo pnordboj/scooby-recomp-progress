@@ -1,16 +1,16 @@
 {
   "project": "Scooby-Doo! Night of 100 Frights \u2014 Native PC Port (GameCube Recomp)",
   "repo": "https://github.com/pnordboj/Scooby-Doo_Rezoinked",
-  "generated": "2026-07-10T08:52:36+00:00",
+  "generated": "2026-07-10T09:00:15+00:00",
   "overall_percent": 71.5,
   "headline": "First level loads + world renders in-game (h001)",
   "metrics": {
     "static_recompilation_percent": 100.0,
-    "code_map_coverage_percent": 78.9,
-    "code_pages_entered": 321,
+    "code_map_coverage_percent": 68.3,
+    "code_pages_entered": 278,
     "code_pages_total": 407,
-    "dispatch_entries_executed": 10181,
-    "deepest_run_blocks": 2766021032,
+    "dispatch_entries_executed": 7708,
+    "deepest_run_blocks": 2919235584,
     "instructions_recompiled": 416072
   },
   "milestones_done": 18,
