@@ -1,20 +1,20 @@
 {
   "project": "Scooby-Doo! Night of 100 Frights \u2014 Native PC Port (GameCube Recomp)",
   "repo": "https://github.com/pnordboj/Scooby-Doo_Rezoinked",
-  "generated": "2026-07-12T12:24:21+00:00",
-  "overall_percent": 73.9,
-  "headline": "Cutscene bypassed: h001 renders in-game at game mode 12",
+  "generated": "2026-07-12T15:03:32+00:00",
+  "overall_percent": 80.0,
+  "headline": "PLAYABLE: player control unlocks after the cutscene; Scooby walks under input",
   "metrics": {
     "static_recompilation_percent": 100.0,
-    "code_map_coverage_percent": 68.3,
-    "code_pages_entered": 278,
+    "code_map_coverage_percent": 72.5,
+    "code_pages_entered": 295,
     "code_pages_total": 407,
-    "dispatch_entries_executed": 7708,
-    "deepest_run_blocks": 2919235584,
+    "dispatch_entries_executed": 7998,
+    "deepest_run_blocks": 520093696,
     "instructions_recompiled": 416072
   },
-  "milestones_done": 21,
-  "milestones_total": 27,
+  "milestones_done": 23,
+  "milestones_total": 28,
   "milestones": [
     {
       "name": "Game extracted (RVZ -> DOL + 329 asset files)",
@@ -93,11 +93,19 @@
       "done": true
     },
     {
-      "name": "In-level freeze root-caused: unplayable Bink FMV intro cutscene",
+      "name": "In-level freeze root-caused: intro cutscene (Bink FMV) playing at emulation speed",
       "done": true
     },
     {
-      "name": "Cutscene bypassed: h001 renders in-game at game mode 12",
+      "name": "Cutscene skippable (dev fast-path) \u2014 h001 renders in-game",
+      "done": true
+    },
+    {
+      "name": "Intro cutscene plays to completion (Bink lifecycle end-to-end)",
+      "done": true
+    },
+    {
+      "name": "PLAYABLE: player control unlocks after the cutscene; Scooby walks under input",
       "done": true
     },
     {
@@ -105,15 +113,11 @@
       "done": false
     },
     {
-      "name": "Full input path (game input manager fed each frame)",
+      "name": "Full input path (SDK SI/PAD poll driven by the game itself)",
       "done": false
     },
     {
       "name": "3D rendering (Z-buffer, TEV stages, lighting)",
-      "done": false
-    },
-    {
-      "name": "In-game / level playable",
       "done": false
     },
     {
@@ -153,8 +157,8 @@
     },
     {
       "name": "SI (controllers)",
-      "status": "partial",
-      "notes": "pad detected; not yet driving gameplay"
+      "status": "works",
+      "notes": "host keyboard drives gameplay (engine-level inject); SDK poll path pending"
     },
     {
       "name": "EXI / memory card",
