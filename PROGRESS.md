@@ -6,7 +6,7 @@ _Progress generated 2026-07-12 by `tools/gen_progress.py`. Run it after a sessio
 
 ## Overall (boot → playable milestones)
 
-`██████████████████████░░░░░░░░` **73%**
+`██████████████████████░░░░░░░░` **74%**
 
 ## Metrics
 
@@ -41,6 +41,8 @@ _Code-map coverage = share of 4KB pages of game code the harness has entered —
 - [x] TITLE SCREEN renders (logo + 3D haunted house)
 - [x] First level loads + world renders in-game (h001)
 - [x] In-level crash fixed: level renders indefinitely (UAF)
+- [x] In-level freeze root-caused: unplayable Bink FMV intro cutscene
+- [x] Cutscene bypassed: h001 renders in-game at game mode 12
 - [ ] Title screen menu interactive (input-driven)
 - [ ] Full input path (game input manager fed each frame)
 - [ ] 3D rendering (Z-buffer, TEV stages, lighting)
@@ -63,7 +65,9 @@ _Code-map coverage = share of 4KB pages of game code the harness has entered —
 
 ## Current frontier
 
-**The first level (h001) loads and renders natively** — the intro scene (Shaggy with
-Scooby Snacks) and the level world stream in and draw (millions of triangles/frame).
-Unblocked by fixing a DVD-completion timing race that starved the level streamer.
-Next: wire controller input to gameplay, then lighting/TEV polish and audio.
+**The in-level freeze is root-caused: it was the intro cutscene.** On entering the first
+level (h001) the game plays a Bink FMV video (`files/fmv/cin*.bik`) that the runtime can't
+yet decode, so the modal cutscene player never finishes and gameplay never starts. Skipping
+the cutscene at its trigger reaches the rendered h001 level at game mode 12, with controller
+input delivered into the pad. Next: FMV playback (or a clean cutscene-done handoff) for
+stable interactive gameplay, then lighting/TEV polish and audio.

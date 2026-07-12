@@ -1,9 +1,9 @@
 {
   "project": "Scooby-Doo! Night of 100 Frights \u2014 Native PC Port (GameCube Recomp)",
   "repo": "https://github.com/pnordboj/Scooby-Doo_Rezoinked",
-  "generated": "2026-07-12T11:39:57+00:00",
-  "overall_percent": 72.8,
-  "headline": "In-level crash fixed: level renders indefinitely (UAF)",
+  "generated": "2026-07-12T12:24:21+00:00",
+  "overall_percent": 73.9,
+  "headline": "Cutscene bypassed: h001 renders in-game at game mode 12",
   "metrics": {
     "static_recompilation_percent": 100.0,
     "code_map_coverage_percent": 68.3,
@@ -13,8 +13,8 @@
     "deepest_run_blocks": 2919235584,
     "instructions_recompiled": 416072
   },
-  "milestones_done": 19,
-  "milestones_total": 25,
+  "milestones_done": 21,
+  "milestones_total": 27,
   "milestones": [
     {
       "name": "Game extracted (RVZ -> DOL + 329 asset files)",
@@ -90,6 +90,14 @@
     },
     {
       "name": "In-level crash fixed: level renders indefinitely (UAF)",
+      "done": true
+    },
+    {
+      "name": "In-level freeze root-caused: unplayable Bink FMV intro cutscene",
+      "done": true
+    },
+    {
+      "name": "Cutscene bypassed: h001 renders in-game at game mode 12",
       "done": true
     },
     {
