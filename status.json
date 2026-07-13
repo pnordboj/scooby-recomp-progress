@@ -1,9 +1,9 @@
 {
   "project": "Scooby-Doo! Night of 100 Frights \u2014 Native PC Port (GameCube Recomp)",
   "repo": "https://github.com/pnordboj/Scooby-Doo_Rezoinked",
-  "generated": "2026-07-13T07:48:29+00:00",
-  "overall_percent": 80.5,
-  "headline": "Playable at correct real speed (wall-clock timebase, 50Hz vblank, GPU-fence HLE)",
+  "generated": "2026-07-13T08:11:43+00:00",
+  "overall_percent": 80.9,
+  "headline": "Intro movie visible: Bink FMV frames render on screen (TEV alpha-env fix)",
   "metrics": {
     "static_recompilation_percent": 100.0,
     "code_map_coverage_percent": 72.5,
@@ -13,8 +13,8 @@
     "deepest_run_blocks": 520093696,
     "instructions_recompiled": 416072
   },
-  "milestones_done": 24,
-  "milestones_total": 29,
+  "milestones_done": 25,
+  "milestones_total": 30,
   "milestones": [
     {
       "name": "Game extracted (RVZ -> DOL + 329 asset files)",
@@ -110,6 +110,10 @@
     },
     {
       "name": "Playable at correct real speed (wall-clock timebase, 50Hz vblank, GPU-fence HLE)",
+      "done": true
+    },
+    {
+      "name": "Intro movie visible: Bink FMV frames render on screen (TEV alpha-env fix)",
       "done": true
     },
     {

@@ -46,6 +46,7 @@ _Code-map coverage = share of 4KB pages of game code the harness has entered —
 - [x] Intro cutscene plays to completion (Bink lifecycle end-to-end)
 - [x] PLAYABLE: player control unlocks after the cutscene; Scooby walks under input
 - [x] Playable at correct real speed (wall-clock timebase, 50Hz vblank, GPU-fence HLE)
+- [x] Intro movie visible: Bink FMV frames render on screen (TEV alpha-env fix)
 - [ ] Title screen menu interactive (input-driven)
 - [ ] Full input path (SDK SI/PAD poll driven by the game itself)
 - [ ] 3D rendering (Z-buffer, TEV stages, lighting)
@@ -76,5 +77,7 @@ world simulates fully (544 entities update every frame). Host keyboard drives th
 (`SCOOBY_PLAY=1`; arrows = move). The game now runs at **correct real speed** by default:
 a wall-clock timebase (real 40.5 MHz) with 50 Hz PAL vblank pacing, made stable by an HLE
 of the GPU draw-sync fence our synchronous software rasterizer can't satisfy mid-frame.
-Remaining work is quality, not progression: drawing the Bink video frames, interpreter
-performance (in-level ~17-28 fps), camera/lighting/TEV polish, and audio.
+**The intro movie is now visible on screen** (the Bink pipeline was fully working; a
+one-line-class TEV alpha-env fix in the rasterizer made the video quad opaque).
+Remaining work is quality, not progression: interpreter performance (in-level ~17-28
+fps, video decode ~11 fps), camera/lighting/TEV polish, and audio.
