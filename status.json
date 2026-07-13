@@ -1,7 +1,7 @@
 {
   "project": "Scooby-Doo! Night of 100 Frights \u2014 Native PC Port (GameCube Recomp)",
   "repo": "https://github.com/pnordboj/Scooby-Doo_Rezoinked",
-  "generated": "2026-07-13T17:03:07+00:00",
+  "generated": "2026-07-13T17:09:33+00:00",
   "overall_percent": 80.9,
   "headline": "Intro movie visible: Bink FMV frames render on screen (TEV alpha-env fix)",
   "metrics": {
