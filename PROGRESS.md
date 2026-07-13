@@ -6,7 +6,7 @@ _Progress generated 2026-07-13 by `tools/gen_progress.py`. Run it after a sessio
 
 ## Overall (boot → playable milestones)
 
-`████████████████████████░░░░░░` **80%**
+`████████████████████████░░░░░░` **81%**
 
 ## Metrics
 
@@ -45,6 +45,7 @@ _Code-map coverage = share of 4KB pages of game code the harness has entered —
 - [x] Cutscene skippable (dev fast-path) — h001 renders in-game
 - [x] Intro cutscene plays to completion (Bink lifecycle end-to-end)
 - [x] PLAYABLE: player control unlocks after the cutscene; Scooby walks under input
+- [x] Playable at correct real speed (wall-clock timebase, 50Hz vblank, GPU-fence HLE)
 - [ ] Title screen menu interactive (input-driven)
 - [ ] Full input path (SDK SI/PAD poll driven by the game itself)
 - [ ] 3D rendering (Z-buffer, TEV stages, lighting)
@@ -72,5 +73,8 @@ emulation speed (~4 min wall), the game's own finalize runs, Scooby looks around
 player control unlocks: he **walks under held input** (verified via the engine's live
 animation state: `Idle_normal` -> `Idle_LookLeft/Right` -> `Walk_brave`, sustained). The
 world simulates fully (544 entities update every frame). Host keyboard drives the game
-(`SCOOBY_PLAY=1`; arrows = move). Remaining work is quality, not progression: real-time
-pacing, drawing the Bink video frames, camera/lighting/TEV polish, and audio.
+(`SCOOBY_PLAY=1`; arrows = move). The game now runs at **correct real speed** by default:
+a wall-clock timebase (real 40.5 MHz) with 50 Hz PAL vblank pacing, made stable by an HLE
+of the GPU draw-sync fence our synchronous software rasterizer can't satisfy mid-frame.
+Remaining work is quality, not progression: drawing the Bink video frames, interpreter
+performance (in-level ~17-28 fps), camera/lighting/TEV polish, and audio.

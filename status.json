@@ -1,9 +1,9 @@
 {
   "project": "Scooby-Doo! Night of 100 Frights \u2014 Native PC Port (GameCube Recomp)",
   "repo": "https://github.com/pnordboj/Scooby-Doo_Rezoinked",
-  "generated": "2026-07-13T07:46:08+00:00",
-  "overall_percent": 80.0,
-  "headline": "PLAYABLE: player control unlocks after the cutscene; Scooby walks under input",
+  "generated": "2026-07-13T07:48:29+00:00",
+  "overall_percent": 80.5,
+  "headline": "Playable at correct real speed (wall-clock timebase, 50Hz vblank, GPU-fence HLE)",
   "metrics": {
     "static_recompilation_percent": 100.0,
     "code_map_coverage_percent": 72.5,
@@ -13,8 +13,8 @@
     "deepest_run_blocks": 520093696,
     "instructions_recompiled": 416072
   },
-  "milestones_done": 23,
-  "milestones_total": 28,
+  "milestones_done": 24,
+  "milestones_total": 29,
   "milestones": [
     {
       "name": "Game extracted (RVZ -> DOL + 329 asset files)",
@@ -106,6 +106,10 @@
     },
     {
       "name": "PLAYABLE: player control unlocks after the cutscene; Scooby walks under input",
+      "done": true
+    },
+    {
+      "name": "Playable at correct real speed (wall-clock timebase, 50Hz vblank, GPU-fence HLE)",
       "done": true
     },
     {
