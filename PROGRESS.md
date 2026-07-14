@@ -4,18 +4,18 @@ _Progress generated 2026-07-14 by `tools/gen_progress.py`. Run it after a sessio
 
 ![progress](progress.svg)
 
-## Overall (boot → playable milestones)
+## Overall (distance to FULLY PLAYABLE on PC)
 
-`████████████████████████░░░░░░` **81%**
+`███████████░░░░░░░░░░░░░░░░░░░` **37%**
 
 ## Metrics
 
 | Metric | Value | |
 |---|---|---|
 | Static recompilation | 416,072 / 416,072 instructions (100%) | `████████████████████` |
-| Runtime code-map coverage | 295 / 407 code pages entered (72.5%) | `██████████████░░░░░░` |
-| Runtime dispatch entry points executed | 7,998 | |
-| Deepest instrumented run | 520,093,696 dispatch blocks | |
+| Runtime code-map coverage | 321 / 407 code pages entered (78.9%) | `████████████████░░░░` |
+| Runtime dispatch entry points executed | 10,179 | |
+| Deepest instrumented run | 4,145,131,273 dispatch blocks | |
 
 _Static recompilation = share of the game's PowerPC code DolRecomp emitted C for (the Gekko decoder handled everything, incl. paired singles)._
 _Code-map coverage = share of 4KB pages of game code the harness has entered — grows as the game gets deeper into boot/gameplay. (Menus/boot exercise a small slice of a game's code; in-game play is what pushes this up.)_
@@ -41,17 +41,23 @@ _Code-map coverage = share of 4KB pages of game code the harness has entered —
 - [x] TITLE SCREEN renders (logo + 3D haunted house)
 - [x] First level loads + world renders in-game (h001)
 - [x] In-level crash fixed: level renders indefinitely (UAF)
-- [x] In-level freeze root-caused: intro cutscene (Bink FMV) playing at emulation speed
-- [x] Cutscene skippable (dev fast-path) — h001 renders in-game
-- [x] Intro cutscene plays to completion (Bink lifecycle end-to-end)
-- [x] PLAYABLE: player control unlocks after the cutscene; Scooby walks under input
-- [x] Playable at correct real speed (wall-clock timebase, 50Hz vblank, GPU-fence HLE)
-- [x] Intro movie visible: Bink FMV frames render on screen (TEV alpha-env fix)
+- [x] Intro cutscene plays to completion (Bink FMV end-to-end, frames visible)
+- [x] PLAYABLE: control unlocks after the cutscene; Scooby walks under input
+- [x] Playable at correct real speed (wall-clock timebase, 50Hz vblank)
+- [x] Hub world renders textured with the correct 3rd-person camera (BSP walk + main-camera capture)
+- [ ] Stable level transitions: real async load completions (hub <-> areas, no dual-world hangs)
+- [ ] Characters/entities render complete, incl. skinned animation (Scooby walks visibly)
+- [ ] Compositing correct: flicker-free presents, effects (lightning), texture-streaming residency
+- [ ] HUD + 2D text render correctly (currently mirrored/garbled)
 - [ ] Title screen menu interactive (input-driven)
 - [ ] Full input path (SDK SI/PAD poll driven by the game itself)
-- [ ] 3D rendering (Z-buffer, TEV stages, lighting)
-- [ ] Audio (DSP-HLE / music + SFX)
-- [ ] Stability / performance / packaging pass
+- [ ] All levels load + render verified (full world tour)
+- [ ] Framerate: hold native 25fps everywhere, then a 60fps mode
+- [ ] Modern resolutions (internal render scale, window/fullscreen)
+- [ ] Saves persist (memory-card emulation end-to-end)
+- [ ] Audio (DSP-HLE / music + SFX) — LAST per user preference
+- [ ] Long-session stability (no fill-loop stalls / deep UAF)
+- [ ] Packaging: clean user-supplied-disc flow, no game assets shipped
 
 ## Subsystem status
 

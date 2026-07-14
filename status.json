@@ -1,20 +1,20 @@
 {
   "project": "Scooby-Doo! Night of 100 Frights \u2014 Native PC Port (GameCube Recomp)",
   "repo": "https://github.com/pnordboj/Scooby-Doo_Rezoinked",
-  "generated": "2026-07-14T14:00:28+00:00",
-  "overall_percent": 80.9,
-  "headline": "Intro movie visible: Bink FMV frames render on screen (TEV alpha-env fix)",
+  "generated": "2026-07-14T21:29:21+00:00",
+  "overall_percent": 37.4,
+  "headline": "Hub world renders textured with the correct 3rd-person camera (BSP walk + main-camera capture)",
   "metrics": {
     "static_recompilation_percent": 100.0,
-    "code_map_coverage_percent": 72.5,
-    "code_pages_entered": 295,
+    "code_map_coverage_percent": 78.9,
+    "code_pages_entered": 321,
     "code_pages_total": 407,
-    "dispatch_entries_executed": 7998,
-    "deepest_run_blocks": 520093696,
+    "dispatch_entries_executed": 10179,
+    "deepest_run_blocks": 4145131273,
     "instructions_recompiled": 416072
   },
-  "milestones_done": 25,
-  "milestones_total": 30,
+  "milestones_done": 23,
+  "milestones_total": 36,
   "milestones": [
     {
       "name": "Game extracted (RVZ -> DOL + 329 asset files)",
@@ -93,28 +93,36 @@
       "done": true
     },
     {
-      "name": "In-level freeze root-caused: intro cutscene (Bink FMV) playing at emulation speed",
+      "name": "Intro cutscene plays to completion (Bink FMV end-to-end, frames visible)",
       "done": true
     },
     {
-      "name": "Cutscene skippable (dev fast-path) \u2014 h001 renders in-game",
+      "name": "PLAYABLE: control unlocks after the cutscene; Scooby walks under input",
       "done": true
     },
     {
-      "name": "Intro cutscene plays to completion (Bink lifecycle end-to-end)",
+      "name": "Playable at correct real speed (wall-clock timebase, 50Hz vblank)",
       "done": true
     },
     {
-      "name": "PLAYABLE: player control unlocks after the cutscene; Scooby walks under input",
+      "name": "Hub world renders textured with the correct 3rd-person camera (BSP walk + main-camera capture)",
       "done": true
     },
     {
-      "name": "Playable at correct real speed (wall-clock timebase, 50Hz vblank, GPU-fence HLE)",
-      "done": true
+      "name": "Stable level transitions: real async load completions (hub <-> areas, no dual-world hangs)",
+      "done": false
     },
     {
-      "name": "Intro movie visible: Bink FMV frames render on screen (TEV alpha-env fix)",
-      "done": true
+      "name": "Characters/entities render complete, incl. skinned animation (Scooby walks visibly)",
+      "done": false
+    },
+    {
+      "name": "Compositing correct: flicker-free presents, effects (lightning), texture-streaming residency",
+      "done": false
+    },
+    {
+      "name": "HUD + 2D text render correctly (currently mirrored/garbled)",
+      "done": false
     },
     {
       "name": "Title screen menu interactive (input-driven)",
@@ -125,15 +133,31 @@
       "done": false
     },
     {
-      "name": "3D rendering (Z-buffer, TEV stages, lighting)",
+      "name": "All levels load + render verified (full world tour)",
       "done": false
     },
     {
-      "name": "Audio (DSP-HLE / music + SFX)",
+      "name": "Framerate: hold native 25fps everywhere, then a 60fps mode",
       "done": false
     },
     {
-      "name": "Stability / performance / packaging pass",
+      "name": "Modern resolutions (internal render scale, window/fullscreen)",
+      "done": false
+    },
+    {
+      "name": "Saves persist (memory-card emulation end-to-end)",
+      "done": false
+    },
+    {
+      "name": "Audio (DSP-HLE / music + SFX) \u2014 LAST per user preference",
+      "done": false
+    },
+    {
+      "name": "Long-session stability (no fill-loop stalls / deep UAF)",
+      "done": false
+    },
+    {
+      "name": "Packaging: clean user-supplied-disc flow, no game assets shipped",
       "done": false
     }
   ],

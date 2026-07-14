@@ -8,7 +8,7 @@
  h1{font-size:20px;margin:0 0 4px} .sub{color:#8b949e;font-size:13px}
  .head{font-size:17px;color:#e6edf3;margin:18px 0 6px}
  .barwrap{background:#21262d;border-radius:8px;height:22px;overflow:hidden;margin:8px 0}
- .bar{height:100%;background:linear-gradient(90deg,#4c9aff,#36b37e);width:80.9%}
+ .bar{height:100%;background:linear-gradient(90deg,#4c9aff,#36b37e);width:37.4%}
  .pct{font-weight:700;font-size:22px}
  .metrics{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
  .metric{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:10px 14px;min-width:120px}
@@ -21,14 +21,14 @@
  a{color:#4c9aff;text-decoration:none} .foot{margin-top:26px;color:#6e7681;font-size:12px}
 </style></head><body><div class="wrap">
 <h1>Scooby-Doo! Night of 100 Frights — Native PC Port (GameCube Recomp)</h1>
-<div class="sub">Live build progress · updated 2026-07-14T14:00:28+00:00</div>
-<div class="head">Intro movie visible: Bink FMV frames render on screen (TEV alpha-env fix)</div>
+<div class="sub">Live build progress · updated 2026-07-14T21:29:21+00:00</div>
+<div class="head">Hub world renders textured with the correct 3rd-person camera (BSP walk + main-camera capture)</div>
 <div class="barwrap"><div class="bar"></div></div>
-<div class="pct">81% <span style="font-size:13px;color:#8b949e;font-weight:400">to a playable native port</span></div>
+<div class="pct">37% <span style="font-size:13px;color:#8b949e;font-weight:400">to a playable native port</span></div>
 <div class="metrics">
  <div class="metric"><b>100%</b><span>PowerPC recompiled</span></div>
- <div class="metric"><b>72.5%</b><span>code-map reached</span></div>
- <div class="metric"><b>25/30</b><span>milestones</span></div>
+ <div class="metric"><b>78.9%</b><span>code-map reached</span></div>
+ <div class="metric"><b>23/36</b><span>milestones</span></div>
 </div>
 <h2>Milestones</h2><ul><li class="done"><span class="mk">✔</span>Game extracted (RVZ -&gt; DOL + 329 asset files)</li>
 <li class="done"><span class="mk">✔</span>main.dol statically recompiled (0 unknown instructions)</li>
@@ -49,17 +49,23 @@
 <li class="done"><span class="mk">✔</span>TITLE SCREEN renders (logo + 3D haunted house)</li>
 <li class="done"><span class="mk">✔</span>First level loads + world renders in-game (h001)</li>
 <li class="done"><span class="mk">✔</span>In-level crash fixed: level renders indefinitely (UAF)</li>
-<li class="done"><span class="mk">✔</span>In-level freeze root-caused: intro cutscene (Bink FMV) playing at emulation speed</li>
-<li class="done"><span class="mk">✔</span>Cutscene skippable (dev fast-path) — h001 renders in-game</li>
-<li class="done"><span class="mk">✔</span>Intro cutscene plays to completion (Bink lifecycle end-to-end)</li>
-<li class="done"><span class="mk">✔</span>PLAYABLE: player control unlocks after the cutscene; Scooby walks under input</li>
-<li class="done"><span class="mk">✔</span>Playable at correct real speed (wall-clock timebase, 50Hz vblank, GPU-fence HLE)</li>
-<li class="done"><span class="mk">✔</span>Intro movie visible: Bink FMV frames render on screen (TEV alpha-env fix)</li>
+<li class="done"><span class="mk">✔</span>Intro cutscene plays to completion (Bink FMV end-to-end, frames visible)</li>
+<li class="done"><span class="mk">✔</span>PLAYABLE: control unlocks after the cutscene; Scooby walks under input</li>
+<li class="done"><span class="mk">✔</span>Playable at correct real speed (wall-clock timebase, 50Hz vblank)</li>
+<li class="done"><span class="mk">✔</span>Hub world renders textured with the correct 3rd-person camera (BSP walk + main-camera capture)</li>
+<li class="todo"><span class="mk">○</span>Stable level transitions: real async load completions (hub &lt;-&gt; areas, no dual-world hangs)</li>
+<li class="todo"><span class="mk">○</span>Characters/entities render complete, incl. skinned animation (Scooby walks visibly)</li>
+<li class="todo"><span class="mk">○</span>Compositing correct: flicker-free presents, effects (lightning), texture-streaming residency</li>
+<li class="todo"><span class="mk">○</span>HUD + 2D text render correctly (currently mirrored/garbled)</li>
 <li class="todo"><span class="mk">○</span>Title screen menu interactive (input-driven)</li>
 <li class="todo"><span class="mk">○</span>Full input path (SDK SI/PAD poll driven by the game itself)</li>
-<li class="todo"><span class="mk">○</span>3D rendering (Z-buffer, TEV stages, lighting)</li>
-<li class="todo"><span class="mk">○</span>Audio (DSP-HLE / music + SFX)</li>
-<li class="todo"><span class="mk">○</span>Stability / performance / packaging pass</li></ul>
+<li class="todo"><span class="mk">○</span>All levels load + render verified (full world tour)</li>
+<li class="todo"><span class="mk">○</span>Framerate: hold native 25fps everywhere, then a 60fps mode</li>
+<li class="todo"><span class="mk">○</span>Modern resolutions (internal render scale, window/fullscreen)</li>
+<li class="todo"><span class="mk">○</span>Saves persist (memory-card emulation end-to-end)</li>
+<li class="todo"><span class="mk">○</span>Audio (DSP-HLE / music + SFX) — LAST per user preference</li>
+<li class="todo"><span class="mk">○</span>Long-session stability (no fill-loop stalls / deep UAF)</li>
+<li class="todo"><span class="mk">○</span>Packaging: clean user-supplied-disc flow, no game assets shipped</li></ul>
 <h2>Subsystems</h2><table><tr><td><span class="dot" style="background:#36b37e"></span>CPU (Gekko / PPC750 + paired singles)</td><td>static recompilation, 0 unknown instructions</td></tr>
 <tr><td><span class="dot" style="background:#36b37e"></span>OS threading / interrupts</td><td>retrace emulation, thread wakeups, DI/SI delivery</td></tr>
 <tr><td><span class="dot" style="background:#36b37e"></span>DVD / DI</td><td>inquiry + real file reads; completion timing tuned</td></tr>
