@@ -1,6 +1,6 @@
 # Scooby-Doo! Night of 100 Frights — Native PC Port (GameCube Recomp)
 
-_Progress generated 2026-07-13 by `tools/gen_progress.py`. Run it after a session to refresh._
+_Progress generated 2026-07-14 by `tools/gen_progress.py`. Run it after a session to refresh._
 
 ![progress](progress.svg)
 
