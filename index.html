@@ -8,7 +8,7 @@
  h1{font-size:20px;margin:0 0 4px} .sub{color:#8b949e;font-size:13px}
  .head{font-size:17px;color:#e6edf3;margin:18px 0 6px}
  .barwrap{background:#21262d;border-radius:8px;height:22px;overflow:hidden;margin:8px 0}
- .bar{height:100%;background:linear-gradient(90deg,#4c9aff,#36b37e);width:37.4%}
+ .bar{height:100%;background:linear-gradient(90deg,#4c9aff,#36b37e);width:42.1%}
  .pct{font-weight:700;font-size:22px}
  .metrics{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
  .metric{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:10px 14px;min-width:120px}
@@ -21,14 +21,14 @@
  a{color:#4c9aff;text-decoration:none} .foot{margin-top:26px;color:#6e7681;font-size:12px}
 </style></head><body><div class="wrap">
 <h1>Scooby-Doo! Night of 100 Frights — Native PC Port (GameCube Recomp)</h1>
-<div class="sub">Live build progress · updated 2026-07-14T22:23:06+00:00</div>
-<div class="head">Hub world renders textured with the correct 3rd-person camera (BSP walk + main-camera capture)</div>
+<div class="sub">Live build progress · updated 2026-07-15T11:19:35+00:00</div>
+<div class="head">Long-session stability: real async load completions (deep-UAF ceiling broken, 18-22k+ frames no crash)</div>
 <div class="barwrap"><div class="bar"></div></div>
-<div class="pct">37% <span style="font-size:13px;color:#8b949e;font-weight:400">to a playable native port</span></div>
+<div class="pct">42% <span style="font-size:13px;color:#8b949e;font-weight:400">to a playable native port</span></div>
 <div class="metrics">
  <div class="metric"><b>100%</b><span>PowerPC recompiled</span></div>
- <div class="metric"><b>78.9%</b><span>code-map reached</span></div>
- <div class="metric"><b>23/36</b><span>milestones</span></div>
+ <div class="metric"><b>79.1%</b><span>code-map reached</span></div>
+ <div class="metric"><b>24/36</b><span>milestones</span></div>
 </div>
 <h2>Milestones</h2><ul><li class="done"><span class="mk">✔</span>Game extracted (RVZ -&gt; DOL + 329 asset files)</li>
 <li class="done"><span class="mk">✔</span>main.dol statically recompiled (0 unknown instructions)</li>
@@ -64,7 +64,7 @@
 <li class="todo"><span class="mk">○</span>Modern resolutions (internal render scale, window/fullscreen)</li>
 <li class="todo"><span class="mk">○</span>Saves persist (memory-card emulation end-to-end)</li>
 <li class="todo"><span class="mk">○</span>Audio (DSP-HLE / music + SFX) — LAST per user preference</li>
-<li class="todo"><span class="mk">○</span>Long-session stability (no fill-loop stalls / deep UAF)</li>
+<li class="done"><span class="mk">✔</span>Long-session stability: real async load completions (deep-UAF ceiling broken, 18-22k+ frames no crash)</li>
 <li class="todo"><span class="mk">○</span>Packaging: clean user-supplied-disc flow, no game assets shipped</li></ul>
 <h2>Subsystems</h2><table><tr><td><span class="dot" style="background:#36b37e"></span>CPU (Gekko / PPC750 + paired singles)</td><td>static recompilation, 0 unknown instructions</td></tr>
 <tr><td><span class="dot" style="background:#36b37e"></span>OS threading / interrupts</td><td>retrace emulation, thread wakeups, DI/SI delivery</td></tr>

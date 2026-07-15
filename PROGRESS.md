@@ -1,21 +1,21 @@
 # Scooby-Doo! Night of 100 Frights — Native PC Port (GameCube Recomp)
 
-_Progress generated 2026-07-14 by `tools/gen_progress.py`. Run it after a session to refresh._
+_Progress generated 2026-07-15 by `tools/gen_progress.py`. Run it after a session to refresh._
 
 ![progress](progress.svg)
 
 ## Overall (distance to FULLY PLAYABLE on PC)
 
-`███████████░░░░░░░░░░░░░░░░░░░` **37%**
+`█████████████░░░░░░░░░░░░░░░░░` **42%**
 
 ## Metrics
 
 | Metric | Value | |
 |---|---|---|
 | Static recompilation | 416,072 / 416,072 instructions (100%) | `████████████████████` |
-| Runtime code-map coverage | 321 / 407 code pages entered (78.9%) | `████████████████░░░░` |
-| Runtime dispatch entry points executed | 10,179 | |
-| Deepest instrumented run | 4,145,131,273 dispatch blocks | |
+| Runtime code-map coverage | 322 / 407 code pages entered (79.1%) | `████████████████░░░░` |
+| Runtime dispatch entry points executed | 10,434 | |
+| Deepest instrumented run | 5,721,030,656 dispatch blocks | |
 
 _Static recompilation = share of the game's PowerPC code DolRecomp emitted C for (the Gekko decoder handled everything, incl. paired singles)._
 _Code-map coverage = share of 4KB pages of game code the harness has entered — grows as the game gets deeper into boot/gameplay. (Menus/boot exercise a small slice of a game's code; in-game play is what pushes this up.)_
@@ -56,7 +56,7 @@ _Code-map coverage = share of 4KB pages of game code the harness has entered —
 - [ ] Modern resolutions (internal render scale, window/fullscreen)
 - [ ] Saves persist (memory-card emulation end-to-end)
 - [ ] Audio (DSP-HLE / music + SFX) — LAST per user preference
-- [ ] Long-session stability (no fill-loop stalls / deep UAF)
+- [x] Long-session stability: real async load completions (deep-UAF ceiling broken, 18-22k+ frames no crash)
 - [ ] Packaging: clean user-supplied-disc flow, no game assets shipped
 
 ## Subsystem status
