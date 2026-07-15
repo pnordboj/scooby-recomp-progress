@@ -1,16 +1,16 @@
 {
   "project": "Scooby-Doo! Night of 100 Frights \u2014 Native PC Port (GameCube Recomp)",
   "repo": "https://github.com/pnordboj/Scooby-Doo_Rezoinked",
-  "generated": "2026-07-15T12:48:58+00:00",
+  "generated": "2026-07-15T13:49:41+00:00",
   "overall_percent": 42.1,
   "headline": "Long-session stability: real async load completions (deep-UAF ceiling broken, 18-22k+ frames no crash)",
   "metrics": {
     "static_recompilation_percent": 100.0,
-    "code_map_coverage_percent": 79.1,
-    "code_pages_entered": 322,
+    "code_map_coverage_percent": 73.0,
+    "code_pages_entered": 297,
     "code_pages_total": 407,
-    "dispatch_entries_executed": 10278,
-    "deepest_run_blocks": 4865392640,
+    "dispatch_entries_executed": 9264,
+    "deepest_run_blocks": 419430400,
     "instructions_recompiled": 416072
   },
   "milestones_done": 24,
