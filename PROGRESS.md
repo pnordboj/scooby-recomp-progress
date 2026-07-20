@@ -1,6 +1,6 @@
 # Scooby-Doo! Night of 100 Frights — Native PC Port (GameCube Recomp)
 
-_Progress generated 2026-07-17 by `tools/gen_progress.py`. Run it after a session to refresh._
+_Progress generated 2026-07-20 by `tools/gen_progress.py`. Run it after a session to refresh._
 
 ![progress](progress.svg)
 
@@ -13,9 +13,9 @@ _Progress generated 2026-07-17 by `tools/gen_progress.py`. Run it after a sessio
 | Metric | Value | |
 |---|---|---|
 | Static recompilation | 416,072 / 416,072 instructions (100%) | `████████████████████` |
-| Runtime code-map coverage | 297 / 407 code pages entered (73.0%) | `███████████████░░░░░` |
-| Runtime dispatch entry points executed | 9,269 | |
-| Deepest instrumented run | 318,767,104 dispatch blocks | |
+| Runtime code-map coverage | 295 / 407 code pages entered (72.5%) | `██████████████░░░░░░` |
+| Runtime dispatch entry points executed | 7,999 | |
+| Deepest instrumented run | 822,083,584 dispatch blocks | |
 
 _Static recompilation = share of the game's PowerPC code DolRecomp emitted C for (the Gekko decoder handled everything, incl. paired singles)._
 _Code-map coverage = share of 4KB pages of game code the harness has entered — grows as the game gets deeper into boot/gameplay. (Menus/boot exercise a small slice of a game's code; in-game play is what pushes this up.)_
