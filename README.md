@@ -7,3 +7,5 @@ Contains only derived metrics — no source code and no game assets.
 - `index.html` — self-contained live status page (GitHub Pages friendly)
 - `progress.svg` — embeddable progress badge
 - `PROGRESS.md` — human-readable progress page
+
+### View the progress at: decomp.nordbo.fun
