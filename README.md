@@ -8,4 +8,4 @@ Contains only derived metrics — no source code and no game assets.
 - `progress.svg` — embeddable progress badge
 - `PROGRESS.md` — human-readable progress page
 
-### View the progress at: decomp.nordbo.fun
+View the progress at: https://decomp.nordbo.fun
